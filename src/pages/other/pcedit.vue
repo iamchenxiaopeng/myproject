@@ -2,7 +2,7 @@
   <div class="index" >
     <div class="editor" id="editor" v-show="showEditor">
       <div class="boxtitle">
-        J1盒子场景编辑器
+        pc端的移动与旋转
       </div>
       <div class="boxtool">
         <div class="iconbox cannotselect"><img src="../../assets/edit/save.png" @click="saveEdit"></div>
