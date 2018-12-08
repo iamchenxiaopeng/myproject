@@ -12,6 +12,10 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
+      path: '/',
+      redirect: '/pcedit'
+    },
+    {
       path: '/pcedit',
       name: 'pcedit',
       component: pcedit,
@@ -20,7 +24,7 @@ export default new Router({
       }
     },
     {
-      path: '/',
+      path: '/feedBack',
       name: 'feedBack',
       component: feedBack,
       meta: {

@@ -6,7 +6,7 @@
       </div>
       <div class="boxtool">
         <div class="iconbox cannotselect"><img src="../../assets/edit/save.png" @click="saveEdit"></div>
-        <div class="iconbox cannotselect"><img src="../../assets/edit/choose.png" @click="openAnimation"></div>
+        <div class="iconbox cannotselect"><img src="../../assets/edit/choose.png" @click="addMaterial"></div>
       </div>
       <div class="container">
         <div id="mycanvas" class="mycanvas" :style="{height: canvasHeight}">
@@ -538,6 +538,7 @@ export default {
         logging: true
       }).then(function(canvas) {
         console.log(canvas.toDataURL());
+        alert('已生成64位图片')
       });
     },
     //打开选择动画页面
