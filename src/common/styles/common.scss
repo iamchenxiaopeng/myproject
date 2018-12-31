@@ -1,0 +1,119 @@
+@import './_base';
+@import './_mixins';
+
+body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, li, a, p, h1, h2, h3, h4,h5, i, b, textarea, button, input, select  {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-style: normal;
+    text-decoration: none;
+    border: none;
+    color: #313131;
+    box-sizing: border-box;
+    font-weight: lighter;
+    font-family: 'Microsoft YaHei';
+    -webkit-tap-highlight-color:transparent;
+    &:focus {
+        outline: none;
+    }
+}
+    
+html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+
+.clear:after{
+    content: '';
+    height: 0;
+    visibility: hidden;
+    display: block;
+    clear: both;
+}
+
+.clear{
+    zoom:1;
+}
+
+//组件宽高100%，父组件给子组件个有宽度的容器
+.components-container {
+    width: 100%;
+    height: 100%;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.fixed-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+//未知尺寸图片自动填满div（宽或高100%），父元素必须相对定位：position:relative;
+.auto-img {
+    position: absolute;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    top: -9999px;
+    right: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+}
+
+/* 文字不能被选择 */
+.cannotselect {
+    -webkit-user-select:none;
+
+   -moz-user-select:none;
+
+   -ms-user-select:none;
+
+   user-select:none;
+}
+
+// 单行文本溢出隐藏
+.hidetext {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+//多行文本溢出隐藏
+.hidetests {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.full-block {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+
+
+
+
+

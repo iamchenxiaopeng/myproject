@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: '',
+  name: 'echarts',
   components: {
 
   },
@@ -17,7 +17,7 @@ export default {
   },
   created(){
 
-  },
+},
   methods: {
     init(){
 

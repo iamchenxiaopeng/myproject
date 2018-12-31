@@ -3,6 +3,7 @@
     <div class="editor" id="editor" v-show="showEditor">
       <div class="boxtitle">
         pc端的移动与旋转
+        <span style="margin-left: 5px;color: red;cursor: pointer" @click="toComponent">去组件页面看看</span>
       </div>
       <div class="boxtool">
         <div class="iconbox cannotselect"><img src="../../assets/edit/save.png" @click="saveEdit"></div>
@@ -598,6 +599,9 @@ export default {
       if (fontSize) {
         this.targetBox.style.fontSize = fontSize + "px";
       }
+    },
+    toComponent(){
+      this.$router.push({name: 'componentList'})
     },
     closeTextBox() {
       this.showTextBox = false;

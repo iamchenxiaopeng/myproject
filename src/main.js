@@ -11,7 +11,7 @@ import usefulFn from './configs/usefulFn'
 import deconsole from './configs/deconsole'
 import adaptive from 'adaptive.js'
 import axios from 'axios'
-import './common/styles/common.css'
+import echarts from 'echarts'
 
 import Swiper from 'swiper'
 import 'swiper/dist/css/swiper.min.css';
@@ -19,17 +19,17 @@ import anime from 'animejs'
 
 Vue.config.productionTip = false;
 
+//移动端自适应
 adaptive.desinWidth = 750;
 adaptive.baseFont = 24;
 adaptive.scaleType = 1;
 adaptive.init();
+
 Vue.prototype.$myhttp=ajax;
 Vue.prototype.$mywxhttp=wxajax;
 Vue.prototype.$winInfo=winInfo;
 Vue.prototype.$usefulFn=usefulFn;
 Vue.prototype.$deconsole=deconsole;
-Vue.prototype.$defaultLoadUrl='../../static/tools/load.jpg';
-Vue.prototype.$defaultLoadUrl2='../../../static/tools/load.jpg';
 
 axios.defaults.baseURL = 'http://localhost:8080/';
 // axios.defaults.headers.common['Authorization'] = 'AUTH_TOKEN';

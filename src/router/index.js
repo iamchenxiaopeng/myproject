@@ -3,7 +3,7 @@ import Router from 'vue-router'
 
 import pcedit from '@/pages/other/pcedit.vue'
 
-import feedBack from '@/pages/my/feedBack.vue'
+import componentList from '@/pages/my/componentList.vue'
 
 
 
@@ -20,15 +20,15 @@ export default new Router({
       name: 'pcedit',
       component: pcedit,
       meta: {
-        title: '编辑'
+        title: '编辑操作'
       }
     },
     {
-      path: '/feedBack',
-      name: 'feedBack',
-      component: feedBack,
+      path: '/componentList',
+      name: 'componentList',
+      component: componentList,
       meta: {
-        title: '意见反馈'
+        title: '组件列表'
       }
     },
   ],
