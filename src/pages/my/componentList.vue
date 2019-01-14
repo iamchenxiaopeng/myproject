@@ -14,6 +14,8 @@
     <div class="bdmap-container">
       <bd-map :searchPlace="searchPlace"></bd-map>
     </div>
+    <div class="getmsg" @click="getGlobalEvent">{{globalMSG}}</div>
+    <echarts></echarts>
   </div>
 </template>
 
@@ -21,19 +23,22 @@
 import bdMap from '../../components/bdMap';
 import loading from '../../components/loading';
 import qr from '../../components/qr';
+import echarts from '../../components/echarts';
 
 export default {
   name: 'componentList',
   components: {
     bdMap,
     loading,
-    qr
+    qr,
+    echarts
   },
   data () {
     return {
       searchPlace: '解放碑',
       nowSearch: '',
       showloading: false,
+      globalMSG: '获取全局参数'
     }
   },
   created(){
@@ -48,6 +53,10 @@ export default {
     },
     search(){
       this.searchPlace = this.nowSearch;
+    },
+    getGlobalEvent(){
+      this.$bus.$emit('globalEvent',this.globalMSG)
+      
     }
   },
   watch: {

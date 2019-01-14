@@ -42,6 +42,9 @@ export default {
   },
   mounted(){
     this.init();
+    this.$bus.$on('globalEvent',(val)=>{
+        console.log(val)
+      })
   },
   watch: {
     searchPlace: function(newV,oldV){

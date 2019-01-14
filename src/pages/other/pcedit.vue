@@ -196,6 +196,7 @@ export default {
     this.getData();
   },
   mounted() {
+
     let _this = this;
 
     // AColorPicker.createPicker('div.colorbox')
@@ -219,7 +220,7 @@ export default {
 
     //监听键盘事件
     document.onclick = function(event) {
-      console.log(event);
+      // console.log(event);
     };
 
     //防止用户拖动过快造成的bug
@@ -293,6 +294,9 @@ export default {
     //动态设置画布宽高
     setHeight() {
       let mycanvas = document.querySelector("#mycanvas");
+      if(!mycanvas){
+        return
+      }
       // let righttool = document.querySelector('#righttool');
       // mycanvas.offsetWidth / this.canvasHeight == 1920 / 1080
       this.canvasHeight = (mycanvas.offsetWidth * 1080) / 1920 + "px";
