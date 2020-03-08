@@ -21,7 +21,7 @@ export default new Router({
       name: 'pcedit',
       component: pcedit,
       meta: {
-        title: '编辑操作'
+        title: 'emoji'
       }
     },
     {

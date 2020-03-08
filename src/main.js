@@ -33,9 +33,9 @@ Vue.prototype.$deconsole=deconsole;
 //作为中央事件处理器使用（注意$on需要在beforedestroy中使用$off移除，不然会触发多次）
 Vue.prototype.$bus=new Vue();
 
-axios.defaults.baseURL = 'http://localhost:8080/';
 // axios.defaults.headers.common['Authorization'] = 'AUTH_TOKEN';
 // axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+axios.defaults.baseUrl = process.env.NODE_ENV === "production" ? '': 'https://helloxiaopeng.com'
 Vue.prototype.$axios=axios;
 
 //年/月
